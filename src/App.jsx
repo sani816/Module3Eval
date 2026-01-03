@@ -1,16 +1,21 @@
-import AddRestaurant from "./components/AddRestaurant"
-import RestaurantList from "./components/RestaurantList";
-import { RestaurantProvider } from "./context/RestaurantContext"
+import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
+import CustomerDashboard from "./components/CustomerDashboard";
+import Login from "./Login";
+import AdminDashboard from "./components/AdminDashboard";
+import { RestaurantProvider } from "./context/RestaurantContext";
 
 const App=()=>{
     return(
         <RestaurantProvider>
-            <div>
-                <h1>Restaurant Management App</h1>
-                <AddRestaurant></AddRestaurant>
-                <RestaurantList></RestaurantList>
-            </div>
-        </RestaurantProvider>
+       <Router>
+        <Routes>
+            <Route path="/" element={<Login/>}></Route>
+             <Route path="/admin" element={<AdminDashboard/>}></Route>
+              <Route path="/customer" element={<CustomerDashboard/>}></Route>
+
+        </Routes>
+       </Router>
+       </RestaurantProvider>
     )
 }
 export default App;

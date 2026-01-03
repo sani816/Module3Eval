@@ -44,7 +44,7 @@ const RestaurantProvider=({children})=>{
 
 
     return(
-        <RestaurantContext.Provider value={{restaurants:filteredRestaurants,addRestaurant,updateRestaurant,filterRestaurants}}>{children}</RestaurantContext.Provider>
+        <RestaurantContext.Provider value={{restaurants:filteredRestaurants,addRestaurant,updateRestaurant,filterRestaurants,deleteRestaurant}}>{children}</RestaurantContext.Provider>
     )
 }
 export{RestaurantProvider,RestaurantContext}

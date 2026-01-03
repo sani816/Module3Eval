@@ -6,7 +6,7 @@ const AddRestaurant=()=>{
     const[name,setName]=useState("")
     const[address,setAddress]=useState("")
     const [type,setType]=useState("")
-    const[parkingLot,setParkingLot]=useState("")
+    const[parkingLot,setParkingLot]=useState("false")
 
     const handleSubmit=(e)=>{
         e.preventDefault()
@@ -21,7 +21,7 @@ const AddRestaurant=()=>{
         setName("")
         setAddress("")
         setType("")
-        setParkingLot("")
+        setParkingLot(false)
     }
 
     return(

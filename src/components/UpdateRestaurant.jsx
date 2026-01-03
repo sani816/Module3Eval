@@ -17,6 +17,7 @@ const UpdateRestaurant=({restaurant,onUpdate})=>{
             type,
             parkingLot
         }
+        onUpdate(updateRestaurant)
 
          return(
         <form onSubmit={handleSubmit}>
